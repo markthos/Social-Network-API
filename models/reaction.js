@@ -1,4 +1,3 @@
-const { get } = require('cypress/types/lodash');
 const { Schema } = require('mongoose');
 
 const ReactionSchema = new Schema(
