@@ -1,4 +1,3 @@
-const { update } = require('cypress/types/lodash');
 const { User, Thought } = require('../models');
 
 module.exports = {
