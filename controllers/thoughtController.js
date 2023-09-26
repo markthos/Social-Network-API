@@ -48,7 +48,8 @@ module.exports = {
     // update thought by id
     async updateThought(req, res) {
         try {
-            const updateThoughtData = await Thought.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
+            const filter = { _id: req.params.id };
+            const updateThoughtData = await Thought.findByIdAndUpdate(filter, req.body, { new: true, runValidators: true });
             if (!updateThoughtData) {
                 return res.status(404).json({ message: 'No thought found with this id!' });
             }
